@@ -25,5 +25,5 @@ resource "local_file" "environment_tfvars" {
   file_permission = "0444"
   content = provider::terraform::encode_tfvars(merge({
     for key, var in var.variables : key => local.env[key]
-  },{role_arn = module.backend.role_arn}))
+  },{role_arn = var.role_arn}))
 }
