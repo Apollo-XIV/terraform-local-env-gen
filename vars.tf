@@ -28,3 +28,7 @@ variable "variables" {
   description = "A map of variable names and types (string formatted)"
   default     = {}
 }
+
+variable "role_arn" {
+  type = string
+}
